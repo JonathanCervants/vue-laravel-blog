@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "@vitejs/plugin-vue": "^5.0.4",
+        "autoload": "^0.1.2",
         "vue": "^3.4.27",
         "vue-axios": "^3.5.2",
         "vue-router": "^4.3.2"
