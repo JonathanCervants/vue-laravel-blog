@@ -22,6 +22,11 @@ const routes: RouteRecordRaw[] =[
         component: Crear
     },
     {
+        path: '/mostrar',
+        name:'Mostrar',
+        component: Mostrar
+    }, 
+    {
         path: '/contacto',
         name:'Contacto',
         component: Contacto

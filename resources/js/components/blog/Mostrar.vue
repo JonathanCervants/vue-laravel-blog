@@ -18,10 +18,11 @@
                         <td>{{ blog.id }}</td>
                         <td>{{ blog.titulo }}</td>
                         <td>{{ blog.contenido }}</td>
-                        <!-- <td>
-                            <router-link :to='name='
+                        <td>
+                            <Router-Link to='{name:"editarBlog" params:{id:blog:id}}' class="btn btn-info"><i class="fas fa-edit"></i></Router-Link>
+                            <a type="button" @click="borrarBlog(blog.id)" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                         </td>
- -->
+
                     </tr>
                     
                 </tbody>

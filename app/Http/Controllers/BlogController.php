@@ -11,10 +11,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blog = Blog::create($request->post());
-        return response()->json([
-            'blog' => $blog
-        ]);
+        $blog = Blog::all();
+        return $blog;
     }
 
     /**
