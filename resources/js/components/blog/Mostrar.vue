@@ -19,7 +19,7 @@
                         <td>{{ blog.titulo }}</td>
                         <td>{{ blog.contenido }}</td>
                         <td>
-                            <Router-Link to='{name:"editarBlog" params:{id:blog:id}}' class="btn btn-info"><i class="fas fa-edit"></i></Router-Link>
+                            <router-link :to='{name:"editarBlog", query:{id:blog.id}}' cla ss="btn btn-info"><i class="fas fa-edit"></i></router-link>
                             <a type="button" @click="borrarBlog(blog.id)" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                         </td>
 
@@ -53,6 +53,17 @@ import axios from 'axios'
                     .catch(error=>{
                         this.blogs =  []
                     })
+            },
+            borrarBlog(id){
+                if(confirm("Esta Seguro Eliminar")){
+                    axios.delete(`/api/blog/${id}`)
+                    .then(response=>{
+                        this.mostrarBlogs()
+                    })
+                    .catch(error=>{
+                        console.log(error)
+                    })
+                }
             }
         }
     }

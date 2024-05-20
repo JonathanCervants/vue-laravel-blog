@@ -39,7 +39,8 @@ class BlogController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $user = Blog::findOrFail($id);
+        return $user;
     }
 
     /**
@@ -47,7 +48,8 @@ class BlogController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $user = Blog::update($id);
+        return $user;
     }
 
     /**

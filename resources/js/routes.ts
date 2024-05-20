@@ -4,6 +4,7 @@ import Home from './components/Home.vue';
 import Contacto from './components/Contacto.vue';
 import Mostrar from './components/blog/Mostrar.vue';
 import Crear from './components/blog/Crear.vue';
+import Editar from './components/blog/Editar.vue';
 
 const routes: RouteRecordRaw[] =[
     {
@@ -20,6 +21,11 @@ const routes: RouteRecordRaw[] =[
         path: '/crear',
         name:'crearBlog',
         component: Crear
+    },
+    {
+        path: '/editarBlog/',
+        name:'editarBlog',
+        component: Editar
     },
     {
         path: '/mostrar',
